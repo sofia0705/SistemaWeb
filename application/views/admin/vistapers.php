@@ -34,7 +34,7 @@
                 <td colspan="2"><label>Usuario</label></td>
             </tr>
             <tr>
-                <td><label>Nombre Usuario: </label></td>
+                <td><label>Usuario: </label></td>
                 <td><input type="text" name="user"></td>
             </tr>
             <tr>
@@ -46,5 +46,6 @@
             </tr>
         </table>
     </form>
+    <a href="<?= base_url('Login') ?>">Logout</a>
 </body>
 </html>

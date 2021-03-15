@@ -19,4 +19,20 @@ class Usuario extends CI_Controller {
 
         return $this->db->insert_id();
     }
+    public function actualizarDatos($dato){
+        $campos = array(
+            'nombre' => $dato['nombre'],
+            'appaterno' => $dato['appaterno'],
+            'apmaterno' => $dato['apmaterno'],
+            'fecnac' => $dato['fecnac'],
+            'correo' => $dato['correo']
+            
+        );
+        $this->db->update('usuarios',$campos);
+        $this->db->where('id_persona',$this->session->userdata('s_id_persona'));
+
+        return 1;
+
+    
+    }
 }
